@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Form</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            width: 55%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
+        }
+
+        .form-container img {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+        }
+
+        h1, h2 {
+            text-align: center
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group-inline {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group-inline div {
+            width: 48%;
+        }
+
+        table {
+            width: 20%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            justify-content: center;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            width: 150px;
+            display: block;
+            margin-bottom: 20px;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="besant logo.png" alt="Besant Technologies Logo" class="logo">
+        <h1>Besant Technologies</h1>
+        <h2>Anna Nagar</h2>
+
+    <form action="#" method="post">
+
+        <!-- Date and Name -->
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+            </div>
+        </div>
+
+        <!-- Mobile, Email, and Location -->
+        <div class="form-group-inline">
+            <div class="form-group">
+                <label for="mobile">Mobile No.</label>
+                <input type="tel" id="mobile" name="mobile">
+            </div>
+            <div class="form-group">
+                <label for="alternate">Alternate No.</label>
+                <input type="tel" id="alternate" name="alternate">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email ID</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="location">Current Location</label>
+            <input type="text" id="location" name="location">
+        </div>
+
+        <!-- Course Interested -->
+        <div class="form-group">
+            <label for="course">Course Interested</label>
+            <input type="text" id="course" name="course">
+        </div>
+
+        <!-- Batch Preferred -->
+        <div class="form-group">
+            <label>Batch Preferred</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="batch" value="Weekdays"> Weekdays</label>
+                <label><input type="checkbox" name="batch" value="Weekend"> Weekend</label>
+            </div>
+        </div>
+
+        <!-- Profession and Experience -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Profession</th>
+                    <th>Student</th>
+                    <th>Fresher</th>
+                    <th>Experience in IT</th>
+                    <th>Experience in Non IT</th>
+                    <th>Career Break</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="profession"></td>
+                    <td><input type="checkbox" name="student"></td>
+                    <td><input type="checkbox" name="fresher"></td>
+                    <td><input type="number" name="exp_in_it"></td>
+                    <td><input type="number" name="exp_in_non_it"></td>
+                    <td><input type="checkbox" name="career_break"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Additional Fields -->
+        <div class="form-group">
+            <label for="company">Experience in IT or Non IT Company Name</label>
+            <input type="text" id="company" name="company">
+        </div>
+
+        <div class="form-group">
+            <label>Are you interested in becoming a trainer?</label>
+            <div class="checkbox-group">
+                <label><input type="radio" name="trainer" value="yes"> Yes</label>
+                <label><input type="radio" name="trainer" value="no"> No</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>How did you hear about us?</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="source" value="google"> Google Search</label>
+                <label><input type="checkbox" name="source" value="social_media"> Social Media</label>
+                <label><input type="checkbox" name="source" value="reference"> Reference</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="contact-person">Contact Person from Besant Technologies</label>
+            <input type="text" id="contact-person" name="contact-person">
+        </div>
+
+        <!-- Office Use -->
+        <h3>Office Use</h3>
+        <div class="form-group">
+            <label for="counsellor">Counsellor</label>
+            <input type="text" id="counsellor" name="counsellor">
+        </div>
+
+        <div class="form-group">
+            <label for="fees">Fees</label>
+            <input type="number" id="fees" name="fees">
+        </div>
+
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input type="text" id="status" name="status">
+        </div>
+
+        <div class="form-group">
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
